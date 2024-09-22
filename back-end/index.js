@@ -3,6 +3,8 @@ import express from "express"
 import mongoose from "mongoose";
 import dotenv from "dotenv"
 
+import userRouters from "./routes/user.route.js"
+
 dotenv.config();
 
 mongoose.connect( process.env.MONGO )
@@ -20,6 +22,4 @@ app.listen(3000, () => {
        
 });
 
-app.get( '/test', (req, res) => {
-    res.json({message: "API is working"});
-});
+app.use( '/api/user', userRouters)
