@@ -1,9 +1,9 @@
-import { timeStamp } from "console";
+
 import mongoose from "mongoose";
 
 
 //step-> 1:  first create schema
-const userSchema = new mongoose.Sechema({
+const userSchema = new mongoose.Schema({
     username: {
         type: String,
         required: true,
@@ -12,7 +12,7 @@ const userSchema = new mongoose.Sechema({
 
     email: {
         type: String,
-        required:true,
+        required: true,
         unique: true,
     },
 
@@ -20,11 +20,9 @@ const userSchema = new mongoose.Sechema({
         type: String,
         required: true,
     }
- }, {timeStamp: true}
-);
+}, { timestamps: true });
 
 // step-> 2: create model
-
 const User = mongoose.model('User', userSchema);
 
 export default User;
