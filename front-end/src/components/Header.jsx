@@ -42,15 +42,16 @@ export default function Header() {
             arrowIcon={false}
             inline
             label={
+             
               <Avatar
-                alt="user avatar"
-                img={currentUser.profilePicture}
+                alt='User'
+                img={currentUser.profilePicture }
                 rounded
               />
             }
           >
-            <Dropdown.Header>
-              <span className="block text-sm">@{currentUser.username}</span>
+            <Dropdown.Header >
+              <span className="block text-sm">{currentUser.username}</span>
               <span className="block text-sm font-medium truncate">
                 {currentUser.email}
               </span>
