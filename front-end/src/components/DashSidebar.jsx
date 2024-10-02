@@ -29,6 +29,7 @@ export default function DashSidebar() {
               label="User"
               labelColor="blue"
               className="hover:bg-gray-100"
+              as='div'
             >
               Profile
             </Sidebar.Item>
