@@ -61,8 +61,8 @@ export const signin = async (req, res, next) => {
       const { password: pass, ...rest} = validUser._doc;         //3 we dont need passowrd of valid user
       res
         .status(200)
-        .cookie('access_token',{
-            httpOnly: true
+        .cookie('access_token', token, {
+            httpOnly: true,
         })
         .json( rest );                                                                          //2 add to cookies
 
